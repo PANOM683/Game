@@ -72,6 +72,98 @@ const SPRITES = (() => {
     [0, 0, 0, 6, 0, 6, 0, 0, 0, 0],
   ];
 
+  const CHIBI_PALETTE = {
+    1: "#2a2a2a",
+    2: "#ffd9b3",
+    3: "#1a1a1a",
+    4: "#ff6b35",
+    5: "#2255cc",
+    6: "#ffffff",
+    7: "#663300",
+  };
+
+  const CHIBI_BODY_IDLE = [
+    [0, 0, 1, 1, 1, 1, 1, 1, 0, 0],
+    [0, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+    [0, 1, 2, 2, 2, 2, 2, 2, 1, 0],
+    [0, 1, 2, 3, 2, 2, 3, 2, 1, 0],
+    [0, 1, 2, 2, 2, 2, 2, 2, 1, 0],
+    [0, 0, 2, 2, 2, 2, 2, 2, 0, 0],
+    [0, 0, 0, 4, 4, 4, 4, 0, 0, 0],
+    [0, 0, 4, 4, 6, 6, 4, 4, 0, 0],
+    [0, 0, 4, 4, 4, 4, 4, 4, 0, 0],
+    [0, 0, 0, 5, 5, 5, 5, 0, 0, 0],
+    [0, 0, 0, 5, 5, 5, 5, 0, 0, 0],
+    [0, 0, 7, 7, 0, 0, 7, 7, 0, 0],
+  ];
+
+  const CHIBI_WALK1 = [
+    [0, 0, 1, 1, 1, 1, 1, 1, 0, 0],
+    [0, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+    [0, 1, 2, 2, 2, 2, 2, 2, 1, 0],
+    [0, 1, 2, 3, 2, 2, 3, 2, 1, 0],
+    [0, 1, 2, 2, 2, 2, 2, 2, 1, 0],
+    [0, 0, 2, 2, 2, 2, 2, 2, 0, 0],
+    [0, 0, 0, 4, 4, 4, 4, 0, 0, 0],
+    [0, 0, 4, 4, 6, 6, 4, 4, 0, 0],
+    [0, 0, 4, 4, 4, 4, 4, 4, 0, 0],
+    [0, 0, 0, 5, 5, 5, 5, 0, 0, 0],
+    [0, 7, 7, 0, 0, 0, 0, 7, 7, 0],
+    [0, 7, 0, 0, 0, 0, 0, 0, 7, 0],
+  ];
+
+  const CHIBI_WALK2 = [
+    [0, 0, 1, 1, 1, 1, 1, 1, 0, 0],
+    [0, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+    [0, 1, 2, 2, 2, 2, 2, 2, 1, 0],
+    [0, 1, 2, 3, 2, 2, 3, 2, 1, 0],
+    [0, 1, 2, 2, 2, 2, 2, 2, 1, 0],
+    [0, 0, 2, 2, 2, 2, 2, 2, 0, 0],
+    [0, 0, 0, 4, 4, 4, 4, 0, 0, 0],
+    [0, 0, 4, 4, 6, 6, 4, 4, 0, 0],
+    [0, 0, 4, 4, 4, 4, 4, 4, 0, 0],
+    [0, 0, 0, 5, 5, 5, 5, 0, 0, 0],
+    [0, 0, 0, 7, 0, 0, 7, 0, 0, 0],
+    [0, 0, 0, 0, 7, 7, 0, 0, 0, 0],
+  ];
+
+  const BOSS_BODY = [
+    [0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0],
+    [0, 0, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1, 0, 0],
+    [0, 1, 1, 2, 2, 1, 4, 4, 1, 2, 2, 1, 1, 0],
+    [0, 1, 1, 1, 1, 1, 4, 4, 1, 1, 1, 1, 1, 0],
+    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+    [1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 5, 1, 1],
+    [1, 1, 1, 1, 1, 1, 3, 3, 1, 1, 1, 1, 1, 1],
+    [1, 1, 1, 1, 1, 3, 3, 3, 3, 1, 1, 1, 1, 1],
+    [1, 1, 1, 1, 1, 1, 3, 3, 1, 1, 1, 1, 1, 1],
+    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+    [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+    [0, 1, 1, 2, 1, 1, 1, 1, 1, 2, 1, 1, 0, 0],
+    [0, 0, 1, 2, 1, 1, 1, 1, 1, 2, 1, 0, 0, 0],
+    [0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0],
+    [0, 0, 6, 6, 0, 0, 0, 0, 0, 6, 6, 0, 0, 0],
+    [0, 0, 6, 6, 0, 0, 0, 0, 0, 6, 6, 0, 0, 0],
+  ];
+
+  const BOSS_PALETTE_1 = {
+    1: "#9b30ff",
+    2: "#6a1fb0",
+    3: "#2a0a4a",
+    4: "#ff2266",
+    5: "#c080ff",
+    6: "#1a0530",
+  };
+
+  const BOSS_PALETTE_2 = {
+    1: "#3a1a5c",
+    2: "#220f3d",
+    3: "#000000",
+    4: "#00eaff",
+    5: "#6a3a9c",
+    6: "#0a0515",
+  };
+
   const GUN = [
     [0, 0, 0, 0, 8, 8, 8, 8, 8, 8],
     [7, 7, 7, 7, 7, 7, 8, 8, 8, 8],
@@ -160,6 +252,72 @@ const SPRITES = (() => {
     [0, 6, 6, 0, 0, 6, 6, 0],
   ];
 
+  const ENEMY_SPLITTER_PALETTE = {
+    1: "#ff8800",
+    2: "#cc6600",
+    3: "#331100",
+    4: "#ffcc00",
+    5: "#803300",
+    6: "#1a0800",
+  };
+
+  const ENEMY_SPLITTER = [
+    [0, 0, 1, 1, 1, 1, 1, 1, 0, 0],
+    [0, 1, 2, 1, 1, 1, 1, 2, 1, 0],
+    [1, 1, 1, 4, 1, 1, 4, 1, 1, 1],
+    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+    [1, 3, 1, 1, 1, 1, 1, 1, 3, 1],
+    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+    [1, 1, 3, 1, 1, 1, 1, 3, 1, 1],
+    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+    [0, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+    [0, 1, 1, 0, 0, 0, 0, 1, 1, 0],
+    [0, 5, 5, 0, 0, 0, 0, 5, 5, 0],
+    [0, 6, 6, 0, 0, 0, 0, 6, 6, 0],
+  ];
+
+  const ENEMY_MEDIC_PALETTE = {
+    1: "#2ec4ff",
+    2: "#1a86b3",
+    3: "#ffffff",
+    4: "#0a4a66",
+    5: "#0d3a4d",
+  };
+
+  const ENEMY_MEDIC = [
+    [0, 0, 1, 1, 1, 1, 0, 0],
+    [0, 1, 2, 1, 1, 2, 1, 0],
+    [0, 1, 1, 1, 1, 1, 1, 0],
+    [1, 1, 1, 3, 3, 1, 1, 1],
+    [1, 1, 3, 3, 3, 3, 1, 1],
+    [1, 1, 1, 3, 3, 1, 1, 1],
+    [1, 1, 1, 1, 1, 1, 1, 1],
+    [0, 1, 1, 1, 1, 1, 1, 0],
+    [0, 4, 4, 0, 0, 4, 4, 0],
+    [0, 5, 5, 0, 0, 5, 5, 0],
+  ];
+
+  const ENEMY_ASSASSIN_PALETTE = {
+    1: "#aa00ff",
+    2: "#6600aa",
+    3: "#1a0033",
+    4: "#ee88ff",
+    5: "#330055",
+  };
+
+  const ENEMY_ASSASSIN = [
+    [0, 0, 1, 1, 1, 1, 0, 0],
+    [0, 1, 2, 4, 4, 2, 1, 0],
+    [0, 1, 1, 3, 3, 1, 1, 0],
+    [0, 1, 1, 1, 1, 1, 1, 0],
+    [0, 1, 5, 1, 1, 5, 1, 0],
+    [0, 1, 1, 1, 1, 1, 1, 0],
+    [0, 0, 1, 1, 1, 1, 0, 0],
+    [0, 0, 1, 0, 0, 1, 0, 0],
+    [0, 5, 5, 0, 0, 5, 5, 0],
+    [0, 3, 3, 0, 0, 3, 3, 0],
+  ];
+
   const EXPLOSION_FRAMES = [];
   for (let f = 0; f < 5; f++) {
     const frame = [];
@@ -185,6 +343,23 @@ const SPRITES = (() => {
     px(ctx, data, x - 5 * S, y - 6 * S, PLAYER_PALETTE);
   }
 
+  function drawChibiBody(ctx, frame, x, y) {
+    const data =
+      frame === 0 ? CHIBI_BODY_IDLE : frame === 1 ? CHIBI_WALK1 : CHIBI_WALK2;
+    px(ctx, data, x - 5 * S, y - 6 * S, CHIBI_PALETTE);
+  }
+
+  function drawBoss(ctx, x, y, tier) {
+    const palette = tier === 2 ? BOSS_PALETTE_2 : BOSS_PALETTE_1;
+    const scale = tier === 2 ? 1.15 : 1;
+    ctx.save();
+    ctx.translate(x, y);
+    ctx.scale(scale, scale);
+    ctx.translate(-x, -y);
+    px(ctx, BOSS_BODY, x - 7 * S, y - 8 * S, palette);
+    ctx.restore();
+  }
+
   function drawGun(ctx, x, y, angle) {
     ctx.save();
     ctx.translate(x, y);
@@ -206,6 +381,18 @@ const SPRITES = (() => {
     px(ctx, ENEMY_SHOOTER, x - 4 * S, y - 5 * S, ENEMY_SHOOTER_PALETTE);
   }
 
+  function drawEnemySplitter(ctx, x, y) {
+    px(ctx, ENEMY_SPLITTER, x - 5 * S, y - 6 * S, ENEMY_SPLITTER_PALETTE);
+  }
+
+  function drawEnemyMedic(ctx, x, y) {
+    px(ctx, ENEMY_MEDIC, x - 4 * S, y - 5 * S, ENEMY_MEDIC_PALETTE);
+  }
+
+  function drawEnemyAssassin(ctx, x, y) {
+    px(ctx, ENEMY_ASSASSIN, x - 4 * S, y - 5 * S, ENEMY_ASSASSIN_PALETTE);
+  }
+
   function drawExplosion(ctx, x, y, frameIdx) {
     if (frameIdx >= EXPLOSION_FRAMES.length) return;
     px(
@@ -215,6 +402,24 @@ const SPRITES = (() => {
       y - 4 * S,
       EXPLOSION_PALETTE,
     );
+  }
+
+  function drawBigExplosion(ctx, x, y, frame, maxRadius) {
+    const t = frame / 6;
+    const r = maxRadius * Math.min(1, t * 1.4);
+    const alpha = 1 - t;
+    ctx.save();
+    ctx.globalAlpha = Math.max(0, alpha);
+    ctx.fillStyle = frame < 2 ? "#fff7aa" : "#ff8800";
+    ctx.shadowColor = "#ff8800";
+    ctx.shadowBlur = 20;
+    ctx.beginPath();
+    ctx.arc(x, y, r, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.strokeStyle = "#ff4400";
+    ctx.lineWidth = 2;
+    ctx.stroke();
+    ctx.restore();
   }
 
   function drawBullet(ctx, x, y, angle, isEnemy) {
@@ -227,6 +432,47 @@ const SPRITES = (() => {
     ctx.fillRect(-8, -2, 16, 4);
     ctx.fillStyle = "#ffffff";
     ctx.fillRect(-8, -1, 6, 2);
+    ctx.restore();
+  }
+
+  function drawChainBullet(ctx, x, y, angle) {
+    ctx.save();
+    ctx.translate(x, y);
+    ctx.rotate(angle);
+    ctx.fillStyle = "#ffe066";
+    ctx.shadowColor = "#ffe066";
+    ctx.shadowBlur = 10;
+    ctx.fillRect(-8, -2, 16, 4);
+    ctx.fillStyle = "#ffffff";
+    ctx.fillRect(-8, -1, 6, 2);
+    ctx.restore();
+  }
+
+  function drawChainBolt(ctx, x1, y1, x2, y2, alpha) {
+    ctx.save();
+    ctx.globalAlpha = Math.max(0, Math.min(1, alpha));
+    ctx.strokeStyle = "#ffe066";
+    ctx.shadowColor = "#ffe066";
+    ctx.shadowBlur = 14;
+    ctx.lineWidth = 3;
+    const dx = x2 - x1;
+    const dy = y2 - y1;
+    const dist = Math.hypot(dx, dy) || 1;
+    const nx = -dy / dist;
+    const ny = dx / dist;
+    const segments = 5;
+    ctx.beginPath();
+    ctx.moveTo(x1, y1);
+    for (let i = 1; i < segments; i++) {
+      const t = i / segments;
+      const jitter = (Math.random() - 0.5) * 14;
+      ctx.lineTo(x1 + dx * t + nx * jitter, y1 + dy * t + ny * jitter);
+    }
+    ctx.lineTo(x2, y2);
+    ctx.stroke();
+    ctx.strokeStyle = "#ffffff";
+    ctx.lineWidth = 1;
+    ctx.stroke();
     ctx.restore();
   }
 
@@ -248,32 +494,166 @@ const SPRITES = (() => {
     ctx.restore();
   }
 
-  function drawHealthOrb(ctx, x, y) {
+  function drawGrenade(ctx, x, y) {
     ctx.save();
-    ctx.shadowColor = "#00ff88";
-    ctx.shadowBlur = 10;
-    ctx.fillStyle = "#00ff88";
+    ctx.shadowColor = "#7c9c3c";
+    ctx.shadowBlur = 6;
+    ctx.fillStyle = "#3a4a1a";
     ctx.beginPath();
-    ctx.arc(x, y, 8, 0, Math.PI * 2);
+    ctx.arc(x, y, 7, 0, Math.PI * 2);
     ctx.fill();
-    ctx.fillStyle = "#ffffff";
+    ctx.strokeStyle = "#1a2a0a";
+    ctx.lineWidth = 1;
+    ctx.stroke();
+    ctx.fillStyle = "#c0c0c0";
+    ctx.fillRect(x - 2, y - 10, 4, 4);
+    ctx.restore();
+  }
+
+  function drawLaser(ctx, x1, y1, x2, y2, alpha) {
+    ctx.save();
+    ctx.globalAlpha = Math.max(0, Math.min(1, alpha));
+    ctx.strokeStyle = "#00eaff";
+    ctx.shadowColor = "#00eaff";
+    ctx.shadowBlur = 16;
+    ctx.lineWidth = 5;
+    ctx.beginPath();
+    ctx.moveTo(x1, y1);
+    ctx.lineTo(x2, y2);
+    ctx.stroke();
+    ctx.strokeStyle = "#ffffff";
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.moveTo(x1, y1);
+    ctx.lineTo(x2, y2);
+    ctx.stroke();
+    ctx.restore();
+  }
+
+  function drawPillar(ctx, x, y, w, h) {
+    ctx.save();
+    ctx.fillStyle = "#3a3a44";
+    ctx.fillRect(x, y, w, h);
+    ctx.strokeStyle = "#1a1a22";
+    ctx.lineWidth = 2;
+    ctx.strokeRect(x, y, w, h);
+    ctx.fillStyle = "#55555f";
+    ctx.fillRect(x + 4, y + 4, w - 8, h - 8);
+    ctx.strokeStyle = "#20202a";
+    ctx.lineWidth = 1;
+    for (let i = 1; i < 3; i++) {
+      ctx.beginPath();
+      ctx.moveTo(x, y + (h / 3) * i);
+      ctx.lineTo(x + w, y + (h / 3) * i);
+      ctx.stroke();
+    }
+    ctx.restore();
+  }
+
+  function drawHazard(ctx, x, y, radius, pulseT) {
+    const p = 0.5 + 0.5 * Math.sin(pulseT * 4);
+    ctx.save();
+    ctx.globalAlpha = 0.35 + p * 0.25;
+    ctx.fillStyle = "#ff5500";
+    ctx.shadowColor = "#ff2200";
+    ctx.shadowBlur = 14;
+    ctx.beginPath();
+    ctx.arc(x, y, radius, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.strokeStyle = "#ffaa00";
+    ctx.lineWidth = 2;
+    ctx.setLineDash([6, 4]);
+    ctx.stroke();
+    ctx.restore();
+  }
+
+  function drawBarrel(ctx, x, y, hpRatio) {
+    ctx.save();
+    ctx.fillStyle = "#8a5a1a";
+    ctx.fillRect(x - 12, y - 16, 24, 32);
+    ctx.strokeStyle = "#3a2408";
+    ctx.lineWidth = 2;
+    ctx.strokeRect(x - 12, y - 16, 24, 32);
+    ctx.fillStyle = "#c0821a";
+    ctx.fillRect(x - 12, y - 10, 24, 4);
+    ctx.fillRect(x - 12, y + 4, 24, 4);
+    ctx.fillStyle = "#ff4400";
+    ctx.font = "bold 10px Courier New";
+    ctx.textAlign = "center";
+    ctx.fillText("!", x, y - 18);
+    ctx.restore();
+
+    ctx.fillStyle = "#300000";
+    ctx.fillRect(x - 14, y - 30, 28, 3);
+    ctx.fillStyle = "#ff8800";
+    ctx.fillRect(x - 14, y - 30, 28 * hpRatio, 3);
+  }
+
+  const PICKUP_COLORS = {
+    health: "#00ff88",
+    triple: "#ffee44",
+    rapid: "#ff9944",
+    chain: "#ffe066",
+    laser: "#00eaff",
+    grenade: "#88cc44",
+    shield: "#44ccff",
+    bomb: "#ff4444",
+  };
+  const PICKUP_LABELS = {
+    health: "+",
+    triple: "T",
+    rapid: "R",
+    chain: "C",
+    laser: "L",
+    grenade: "G",
+    shield: "S",
+    bomb: "B",
+  };
+
+  function drawPickup(ctx, x, y, type) {
+    ctx.save();
+    const c = PICKUP_COLORS[type] || "#ffffff";
+    ctx.shadowColor = c;
+    ctx.shadowBlur = 10;
+    ctx.fillStyle = c;
+    ctx.beginPath();
+    ctx.arc(x, y, 9, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.strokeStyle = "#ffffff";
+    ctx.lineWidth = 1;
+    ctx.stroke();
+    ctx.shadowBlur = 0;
+    ctx.fillStyle = "#111";
     ctx.font = "bold 10px Courier New";
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
-    ctx.fillText("+", x, y);
+    ctx.fillText(PICKUP_LABELS[type] || "?", x, y);
     ctx.restore();
   }
 
   return {
     drawPlayerBody,
+    drawChibiBody,
+    drawBoss,
     drawGun,
     drawEnemyWalker,
     drawEnemyCharger,
     drawEnemyShooter,
+    drawEnemySplitter,
+    drawEnemyMedic,
+    drawEnemyAssassin,
     drawExplosion,
+    drawBigExplosion,
     drawBullet,
+    drawChainBullet,
+    drawChainBolt,
     drawMuzzleFlash,
-    drawHealthOrb,
+    drawGrenade,
+    drawLaser,
+    drawPillar,
+    drawHazard,
+    drawBarrel,
+    drawPickup,
     PIXEL_SIZE: S,
   };
 })();
